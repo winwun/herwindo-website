@@ -28,4 +28,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-This uses wrangler to deploy to cloudflare
+This uses wrangler to deploy to cloudflare pages
