@@ -40,7 +40,7 @@ sidebar_position: 3
 </details>
 
 <details>
-  <summary>**Accenture** Pasig, Philippines _Jun 2014 - Oct 2016_</summary>
+  <summary>**Accenture** Pasig, Philippines Apr 2010 - Jun 2014_</summary>
 
   **Tech Stack:** Vbscript, Shell script(bash), BMC Arium Orchestrator, Opalis, C# Webforms
 

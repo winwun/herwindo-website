@@ -179,7 +179,7 @@ function ExperienceSection() {
       title: "Senior Software Engineer",
       company: "Accenture",
       location: "Pasig, Philippines",
-      period: "Jun 2011 - May 2014",
+      period: "Apr 2010 - Jun 2014",
       description: [
         "Gathered requirements from clients on current processes and created design documents to improve them",
         "Created automation scripts to eliminate manual human intervention",
