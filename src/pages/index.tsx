@@ -14,10 +14,28 @@ function ResumeHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.resumeHeader}>
+      {/* Snow animation */}
+      <div className={styles.snowflakes} aria-hidden="true">
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❆</div>
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❆</div>
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❆</div>
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❆</div>
+        <div className={styles.snowflake}>❅</div>
+        <div className={styles.snowflake}>❆</div>
+        <div className={styles.snowflake}>❅</div>
+      </div>
+      
+      {/* Puzzle pieces */}
       <div className={styles.puzzlePiece1}>🧩</div>
       <div className={styles.puzzlePiece2}>🧩</div>
       <div className={styles.puzzlePiece3}>🧩</div>
       <div className={styles.puzzlePiece4}>🧩</div>
+      
       <div className="container">
         <div className={styles.profileSection}>
           <div className={styles.profileImage}>

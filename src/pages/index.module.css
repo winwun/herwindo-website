@@ -44,6 +44,132 @@
   pointer-events: none;
 }
 
+/* Snow animation */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10%;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  user-select: none;
+  animation-name: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.snowflake:nth-child(1) {
+  left: 5%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+  font-size: 1.2rem;
+}
+
+.snowflake:nth-child(2) {
+  left: 15%;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  font-size: 1.8rem;
+}
+
+.snowflake:nth-child(3) {
+  left: 25%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+  font-size: 1rem;
+}
+
+.snowflake:nth-child(4) {
+  left: 35%;
+  animation-duration: 9s;
+  animation-delay: 0.5s;
+  font-size: 1.5rem;
+}
+
+.snowflake:nth-child(5) {
+  left: 45%;
+  animation-duration: 11s;
+  animation-delay: 1.5s;
+  font-size: 1.3rem;
+}
+
+.snowflake:nth-child(6) {
+  left: 55%;
+  animation-duration: 13s;
+  animation-delay: 0s;
+  font-size: 1.6rem;
+}
+
+.snowflake:nth-child(7) {
+  left: 65%;
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+  font-size: 1.1rem;
+}
+
+.snowflake:nth-child(8) {
+  left: 75%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+  font-size: 1.7rem;
+}
+
+.snowflake:nth-child(9) {
+  left: 85%;
+  animation-duration: 11s;
+  animation-delay: 0.5s;
+  font-size: 1.4rem;
+}
+
+.snowflake:nth-child(10) {
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 3s;
+  font-size: 1.3rem;
+}
+
+.snowflake:nth-child(11) {
+  left: 90%;
+  animation-duration: 10s;
+  animation-delay: 1.8s;
+  font-size: 1.5rem;
+}
+
+.snowflake:nth-child(12) {
+  left: 50%;
+  animation-duration: 14s;
+  animation-delay: 0.8s;
+  font-size: 1.2rem;
+}
+
+@keyframes snowfall {
+  0% {
+    top: -10%;
+    opacity: 0;
+    transform: translateX(0) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+    transform: translateX(100px) rotate(360deg);
+  }
+}
+
 @keyframes puzzleSlide {
   0% {
     transform: translate(0, 0);
@@ -949,7 +1075,8 @@
   .puzzlePiece1,
   .puzzlePiece2,
   .puzzlePiece3,
-  .puzzlePiece4 {
+  .puzzlePiece4,
+  .snowflakes {
     display: none !important;
   }
 }
@@ -1024,10 +1151,15 @@
   .puzzlePiece2,
   .puzzlePiece3,
   .puzzlePiece4,
+  .snowflake,
   .profileSection::before,
   .profileSection::after,
   .resumeHeader::before,
   .resumeHeader::after {
     animation: none !important;
+  }
+  
+  .snowflakes {
+    display: none;
   }
 }
