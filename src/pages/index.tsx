@@ -58,11 +58,11 @@ function ResumeHeader() {
 
 function AboutSection() {
   const { siteConfig } = useDocusaurusContext();
-  
+
   const handleDownloadPDF = () => {
     window.print();
   };
-  
+
   return (
     <section className={styles.section}>
       <div className="container">
@@ -162,7 +162,7 @@ function ExperienceSection() {
       techStack: "Node, React, TypeScript, AWS"
     },
     {
-      title: "Software Developer",
+      title: "Software Engineer III",
       company: "Blast Asia",
       location: "Mandaluyong, Philippines",
       period: "Jun 2014 - Oct 2016",
@@ -176,7 +176,7 @@ function ExperienceSection() {
       techStack: "C# MVC and Webforms, Angular, React, Azure"
     },
     {
-      title: "Automation Developer",
+      title: "Senior Software Engineer",
       company: "Accenture",
       location: "Pasig, Philippines",
       period: "Jun 2011 - May 2014",
@@ -264,7 +264,7 @@ function HighlightsSection() {
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
-  
+
   useEffect(() => {
     // Intersection Observer for scroll animations
     const observerOptions = {
@@ -284,7 +284,7 @@ export default function Home(): JSX.Element {
     const elementsToAnimate = document.querySelectorAll(
       `.${styles.section}, .${styles.highlightCard}, .${styles.skillCard}, .${styles.timelineItem}`
     );
-    
+
     elementsToAnimate.forEach((el) => {
       el.classList.add(styles.fadeInUp);
       observer.observe(el);
