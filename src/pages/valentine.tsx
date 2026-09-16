@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "@docusaurus/Head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import styles from "./valentine.module.css";
@@ -14,6 +15,14 @@ export default function Valentine() {
 
   return (
     <main className={styles.valentinePage}>
+        {/* Private page: reachable by direct link, kept out of search engines
+            and the sitemap. Deliberately not disallowed in robots.txt — a
+            blocked crawler never reads the noindex below. */}
+        <Head>
+          <meta name="robots" content="noindex, nofollow" />
+          <title>A letter</title>
+        </Head>
+
         {/* Floating hearts animation */}
         <div className={styles.hearts} aria-hidden="true">
           <div className={styles.heart}>❤️</div>

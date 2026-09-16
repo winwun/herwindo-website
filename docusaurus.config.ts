@@ -5,9 +5,31 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Online Resume',
-  tagline: 'Im a software engineer with over a decade of experience in web development encompassing frontend, backend and cloud infrastructure',
+  title: 'Herwin Ochoa',
+  tagline: 'I’m a software engineer with over a decade of experience in web development encompassing frontend, backend and cloud infrastructure.',
   favicon: 'img/favicon.ico',
+
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap',
+      },
+    },
+  ],
 
   // Set the production url of your site here
   url: 'https://herwindo.com',
@@ -57,6 +79,11 @@ const config: Config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          // Private pages, kept off the sitemap. They still build and remain
+          // reachable by direct link; /valentine also sends a noindex header tag.
+          ignorePatterns: ['/valentine'],
         },
       } satisfies Preset.Options,
     ],

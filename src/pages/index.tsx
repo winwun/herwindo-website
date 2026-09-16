@@ -4,38 +4,15 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMapMarkerAlt, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 
 import styles from "./index.module.css";
 
 function ResumeHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.resumeHeader}>
-      {/* Snow animation */}
-      <div className={styles.snowflakes} aria-hidden="true">
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❆</div>
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❆</div>
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❆</div>
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❆</div>
-        <div className={styles.snowflake}>❅</div>
-        <div className={styles.snowflake}>❆</div>
-        <div className={styles.snowflake}>❅</div>
-      </div>
-      
-      {/* Puzzle pieces */}
-      <div className={styles.puzzlePiece1}>🧩</div>
-      <div className={styles.puzzlePiece2}>🧩</div>
-      <div className={styles.puzzlePiece3}>🧩</div>
-      <div className={styles.puzzlePiece4}>🧩</div>
-      
       <div className="container">
         <div className={styles.profileSection}>
           <div className={styles.profileImage}>
@@ -57,14 +34,11 @@ function ResumeHeader() {
               </div>
             </div>
             <div className={styles.socialLinks}>
-              <a href="https://github.com/herwindo" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/winwun" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} size="lg" />
               </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/herwin-ochoa-792a13123/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
-              </a>
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
               </a>
             </div>
           </div>
@@ -209,7 +183,7 @@ function ExperienceSection() {
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={clsx(styles.section, styles.experienceSection)}>
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>Work Experience</Heading>
         <div className={styles.timeline}>
@@ -281,8 +255,6 @@ function HighlightsSection() {
 }
 
 export default function Home(): React.JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-
   useEffect(() => {
     // Intersection Observer for scroll animations
     const observerOptions = {

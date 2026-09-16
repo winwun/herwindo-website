@@ -15,16 +15,56 @@
   --ifm-color-primary-lightest: #124aaa;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-family-base: 'Plus Jakarta Sans', system-ui, -apple-system,
+    'Segoe UI', Helvetica, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-heading-color: #14181f;
+  --ifm-navbar-shadow: 0 1px 0 rgba(16, 24, 40, 0.08);
+
+  /* Resume design tokens, consumed by src/pages/index.module.css. */
+  --ho-surface: #ffffff;
+  --ho-surface-muted: #f6f7f9;
+  --ho-border: #e5e8ed;
+  --ho-border-strong: #d3d8e0;
+  --ho-text-muted: #545c6b;
+  --ho-primary-tint: rgba(14, 57, 131, 0.08);
+  --ho-radius: 14px;
+  --ho-radius-sm: 10px;
+  --ho-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  --ho-shadow-hover: 0 6px 18px rgba(16, 24, 40, 0.08);
+  --ho-header-from: #0e3983;
+  --ho-header-to: #071f4a;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3d80af;
-  --ifm-color-primary-dark: #37739e;
-  --ifm-color-primary-darker: #346d95;
-  --ifm-color-primary-darkest: #2b5a7b;
-  --ifm-color-primary-light: #458cbe;
-  --ifm-color-primary-lighter: #4e92c1;
-  --ifm-color-primary-lightest: #68a2ca;
+  --ifm-color-primary: #6aa6d4;
+  --ifm-color-primary-dark: #5497c9;
+  --ifm-color-primary-darker: #4a90c5;
+  --ifm-color-primary-darkest: #3778a9;
+  --ifm-color-primary-light: #80b5dd;
+  --ifm-color-primary-lighter: #8abbe0;
+  --ifm-color-primary-lightest: #a9cde9;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-heading-color: #f1f3f6;
+  --ifm-navbar-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  --ho-surface: #1c1e22;
+  --ho-surface-muted: #1a1c1f;
+  --ho-border: #2e3239;
+  --ho-border-strong: #3d424b;
+  --ho-text-muted: #a4acb9;
+  --ho-primary-tint: rgba(106, 166, 212, 0.16);
+  --ho-shadow: none;
+  --ho-shadow-hover: 0 6px 18px rgba(0, 0, 0, 0.3);
+  --ho-header-from: #0c2c66;
+  --ho-header-to: #05142e;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
 }
