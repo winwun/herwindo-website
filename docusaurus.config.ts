@@ -21,7 +21,23 @@ const config: Config = {
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+
+  // Rspack + SWC + LightningCSS build pipeline. Stable since 3.10, and the
+  // default in v4.
+  future: {
+    faster: true,
+    v4: {
+      // Required by future.faster.ssgWorkerThreads. Safe here: no plugin on
+      // this site uses the legacy postBuild({head}) API.
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
