@@ -512,6 +512,17 @@
     display: none !important;
   }
 
+  /*
+   * The scroll animations start at opacity 0 and only reveal on
+   * intersection. Printing never scrolls, so without this everything below
+   * the fold comes out blank.
+   */
+  .fadeInUp {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .highlightCard,
   .skillCard,
   .timelineContent {

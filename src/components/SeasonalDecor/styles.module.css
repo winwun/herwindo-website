@@ -129,3 +129,10 @@
     display: none;
   }
 }
+
+/* Decoration has no place in a printed resume. */
+@media print {
+  .layer {
+    display: none !important;
+  }
+}
