@@ -1,0 +1,131 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  top: -12%;
+  color: rgba(255, 255, 255, 0.85);
+  user-select: none;
+  line-height: 1;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+/* Winter: near-straight fall with a slow sway. */
+.winter .particle {
+  animation-name: fall;
+}
+
+/* Autumn and spring: the same tumble, tuned per season below. */
+.autumn .particle,
+.spring .particle {
+  animation-name: tumble;
+}
+
+.spring .particle {
+  animation-timing-function: ease-in-out;
+}
+
+/* Summer: motes that drift upward in the heat rather than falling. */
+.summer .particle {
+  top: auto;
+  bottom: -12%;
+  color: rgba(255, 236, 170, 0.9);
+  animation-name: rise;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate3d(0, -10%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(1.5rem, 125vh, 0) rotate(160deg);
+  }
+}
+
+@keyframes tumble {
+  0% {
+    transform: translate3d(0, -10%, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(3rem, 25vh, 0) rotate(90deg);
+  }
+  50% {
+    transform: translate3d(-1.5rem, 55vh, 0) rotate(190deg);
+  }
+  75% {
+    transform: translate3d(2.5rem, 85vh, 0) rotate(280deg);
+  }
+  100% {
+    transform: translate3d(0, 125vh, 0) rotate(380deg);
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(2rem, -125vh, 0) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Summer sun, tucked into the top-right corner. */
+.sun {
+  position: absolute;
+  top: -70px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 224, 138, 0.55) 0%,
+    rgba(255, 205, 92, 0.28) 45%,
+    rgba(255, 196, 76, 0) 70%
+  );
+  animation: pulse 7s ease-in-out infinite;
+}
+
+.haze {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    200deg,
+    rgba(255, 213, 120, 0.16) 0%,
+    rgba(255, 213, 120, 0) 55%
+  );
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.09);
+    opacity: 1;
+  }
+}
+
+/* Purely decorative, so it goes away entirely rather than merely slowing. */
+@media (prefers-reduced-motion: reduce) {
+  .layer {
+    display: none;
+  }
+}

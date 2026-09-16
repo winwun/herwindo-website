@@ -8,12 +8,15 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMapMarkerAlt, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { useEffect } from "react";
 
+import SeasonalDecor from "@site/src/components/SeasonalDecor";
+
 import styles from "./index.module.css";
 
 function ResumeHeader() {
   return (
     <header className={styles.resumeHeader}>
-      <div className="container">
+      <SeasonalDecor />
+      <div className={clsx("container", styles.headerContent)}>
         <div className={styles.profileSection}>
           <div className={styles.profileImage}>
             <img src="/img/logo-ho.svg" alt="Herwin Ochoa" className={styles.logoImage} />

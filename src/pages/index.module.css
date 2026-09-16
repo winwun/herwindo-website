@@ -7,10 +7,18 @@
 
 /* ===== RESUME HEADER ===== */
 .resumeHeader {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(160deg, var(--ho-header-from) 0%, var(--ho-header-to) 100%);
   color: #fff;
   padding: 5.5rem 0 4.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Keeps the profile above the seasonal decoration layer. */
+.headerContent {
+  position: relative;
+  z-index: 2;
 }
 
 .profileSection {
